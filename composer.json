@@ -1,0 +1,10 @@
+{
+	"name": "sitewards/captcha",
+	"license": "OSL-3.0",
+	"type": "magento-module",
+	"description": "Additional functionality for magento captcha extension.",
+	"homepage": "http://www.sitewards.com",
+	"require": {
+		"magento-hackathon/magento-composer-installer": "*"
+	}
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * sitewards/captcha.xml
+ * Layout file for the Sitewards Captcha module
+ *
+ * @category    Sitewards
+ * @package     Sitewards_Captcha
+ * @copyright   Copyright (c) 2013 Sitewards GmbH (http://www.sitewards.com/)
+ */
+-->
+<layout>
+	<sendfriend_product_send>
+		<reference name="root">
+			<action method="setTemplate"><template>page/popup.phtml</template></action>
+		</reference>
+		<reference name="sendfriend.send">
+			<action method="setTemplate"><template>sitewards/captcha/sendfriend/send.phtml</template></action>
+		</reference>
+		<block type="captcha/captcha" name="captcha.sendtofriend">
+			<reference name="head">
+				<action method="addJs"><file>mage/captcha.js</file></action>
+			</reference>
+			<action method="setFormId"><formId>product_sendtofriend_form_captcha</formId></action>
+		</block>
+	</sendfriend_product_send>
+	<sendfriend_product_closepopup>
+		<block type="page/html" name="root" template="sitewards/captcha/closepopup.phtml"></block>
+	</sendfriend_product_closepopup>
+	<catalog_product_view>
+		<reference name="head">
+			<action method="addItem"><type>js</type><name>prototype/window.js</name></action>
+			<action method="addItem"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
+			<action method="addCss"><name>lib/prototype/windows/themes/magento.css</name></action>
+			<action method="addItem"><type>js</type><name>sitewards/captcha.js</name></action>
+		</reference>
+	</catalog_product_view>
+</layout>

@@ -1,0 +1,16 @@
+<?php
+/**
+ * Close popup window and redirect to product page
+ *
+ * @category    Sitewards
+ * @package     Sitewards_Captcha
+ * @copyright   Copyright (c) 2013 Sitewards GmbH (http://www.sitewards.com/)
+ */
+/* @var $this Mage_Core_Block_Template */
+?>
+<script type="text/javascript">
+	// <![CDATA[
+	this.parent.closePopup();
+	window.parent.location.href = '<?php echo $this->getRedirectUrl()?>';
+	// ]]>
+</script>

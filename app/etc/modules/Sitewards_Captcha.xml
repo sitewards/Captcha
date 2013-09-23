@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Sitewards_Captcha.xml
+ *	- Activate module,
+ *	- Specify code pool,
+ *	- Set-up dependencies
+ *
+ * @category    Sitewards
+ * @package     Sitewards_Captcha
+ * @copyright   Copyright (c) 2013 Sitewards GmbH (http://www.sitewards.com/de/)
+ */
+-->
+<config>
+	<modules>
+		<Sitewards_Captcha>
+			<active>true</active>
+			<codePool>community</codePool>
+			<depends>
+				<Mage_Catalog />
+				<Mage_Sendfriend />
+				<Mage_Captcha />
+			</depends>
+		</Sitewards_Captcha>
+	</modules>
+</config>

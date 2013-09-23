@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category    Sitewards
+ * @package     Sitewards_Captcha
+ * @copyright   Copyright (c) 2013 Sitewards GmbH (http://www.sitewards.com/)
+ */
+-->
+<config>
+	<sections>
+		<customer>
+			<groups>
+				<captcha>
+					<fields>
+						<heading_3dsecure translate="label">
+							<label>Email to a Friend</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>120</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<depends><enable>1</enable></depends>
+						</heading_3dsecure>
+						<max_till_captcha_times translate="label">
+							<label>Number of emails without captcha</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>130</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+							<depends><enable>1</enable></depends>
+							<frontend_class>required-entry validate-digits</frontend_class>
+						</max_till_captcha_times >
+						<max_till_captcha_timeframe_seconds translate="label">
+							<label>CAPTCHA Timeout (seconds)</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>140</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+							<depends><enable>1</enable></depends>
+							<frontend_class>required-entry validate-digits</frontend_class>
+						</max_till_captcha_timeframe_seconds>
+					</fields>
+				</captcha>
+			</groups>
+		</customer>
+	</sections>
+</config>
+
+

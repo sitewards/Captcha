@@ -1,0 +1,6 @@
+/app/code/community/Sitewards/Captcha /app/code/community/Sitewards/Captcha
+/app/etc/modules/Sitewards_Captcha.xml /app/etc/modules/Sitewards_Captcha.xml
+/app/design/frontend/base/default/layout/sitewards/captcha.xml /app/design/frontend/base/default/layout/sitewards/captcha.xml
+/app/design/frontend/base/default/template/sitewards/captcha /app/design/frontend/base/default/template/sitewards/captcha
+/js/sitewards/captcha.js /js/sitewards/captcha.js
+/app/locale/de_DE/Sitewards_Captcha.csv /app/locale/de_DE/Sitewards_Captcha.csv

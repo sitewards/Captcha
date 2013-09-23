@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * The main config file
+ *
+ * @category    Sitewards
+ * @package     Sitewards_Captcha
+ * @copyright   Copyright (c) 2013 Sitewards GmbH (http://www.sitewards.com/)
+ */
+-->
+<config>
+	<modules>
+		<Sitewards_Captcha>
+			<version>1.0.0</version>
+		</Sitewards_Captcha>
+	</modules>
+	<global>
+		<blocks>
+			<sendfriend>
+				<rewrite>
+					<send>Sitewards_Captcha_Block_Sendfriend_Send</send>
+				</rewrite>
+			</sendfriend>
+			<sitewards_captcha>
+				<class>Sitewards_Captcha_Block</class>
+			</sitewards_captcha>
+		</blocks>
+		<helpers>
+			<captcha>
+				<rewrite>
+					<data>Sitewards_Captcha_Helper_Data</data>
+				</rewrite>
+			</captcha>
+		</helpers>
+		<models>
+			<captcha>
+				<rewrite>
+					<captchachecker>Sitewards_Captcha_Model_CaptchaChecker</captchachecker>
+				</rewrite>
+			</captcha>
+			<sendfriend>
+				<rewrite>
+					<sendfriend>Sitewards_Captcha_Model_Sendfriend</sendfriend>
+				</rewrite>
+			</sendfriend>
+		</models>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<sitewards_productemail>
+					<file>sitewards/captcha.xml</file>
+				</sitewards_productemail>
+			</updates>
+		</layout>
+		<routers>
+			<sendfriend>
+				<args>
+					<modules>
+						<Sitewards_Captcha before="Mage_Sendfriend">Sitewards_Captcha</Sitewards_Captcha>
+					</modules>
+				</args>
+			</sendfriend>
+		</routers>
+		<translate>
+			<modules>
+				<Sitewards_Captcha>
+					<files>
+						<default>Sitewards_Captcha.csv</default>
+					</files>
+				</Sitewards_Captcha>
+			</modules>
+		</translate>
+	</frontend>
+	<default>
+		<sendfriend>
+			<email>
+				<enabled>1</enabled>
+				<template>sendfriend_email_template</template>
+				<allow_guest>1</allow_guest>
+				<max_recipients>5</max_recipients>
+				<max_per_hour>999</max_per_hour>
+				<check_by>0</check_by>
+			</email>
+		</sendfriend>
+		<customer>
+			<captcha>
+				<always_for>
+					<product_sendtofriend_form_captcha>1</product_sendtofriend_form_captcha>
+				</always_for>
+				<max_till_captcha_times>3</max_till_captcha_times>
+				<max_till_captcha_timeframe_seconds>3600</max_till_captcha_timeframe_seconds>
+			</captcha>
+		</customer>
+		<captcha translate="label">
+			<frontend>
+				<areas>
+					<product_sendtofriend_form_captcha>
+						<label>Email to a Friend</label>
+					</product_sendtofriend_form_captcha>
+				</areas>
+			</frontend>
+		</captcha>
+	</default>
+</config>
