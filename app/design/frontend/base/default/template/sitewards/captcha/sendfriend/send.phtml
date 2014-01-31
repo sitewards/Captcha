@@ -6,7 +6,7 @@
  *
  * @category    Sitewards
  * @package     Sitewards_Captcha
- * @copyright   Copyright (c) 2013 Sitewards GmbH (http://www.sitewards.com/)
+ * @copyright   Copyright (c) 2014 Sitewards GmbH (http://www.sitewards.com/)
  */
 /* @var $this Mage_Sendfriend_Block_Send */
 ?>
@@ -105,12 +105,7 @@
 			<div class="fieldset">
 				<h2 class="legend"><?php echo $this->__('Captcha:') ?></h2>
 				<ul class="form-list" id="recipients_options">
-					<?php
-						$oCaptchaBlock = Mage::getBlockSingleton('captcha/captcha')
-							->setFormId('product_sendtofriend_form_captcha')
-							->setShowCaptcha(true);
-						echo $oCaptchaBlock->toHtml();
-					?>
+					<?php echo $this->getChildHtml('captcha');?>
 				</ul>
 			</div>
 		<?php endif;?>
